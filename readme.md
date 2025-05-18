@@ -9,32 +9,13 @@ Um template MVC (Model-View-Controller) simples e eficiente para projetos PHP.
 - MySQL/MariaDB
 
 ## 🚀 Instalação
-
-1. Clone o repositório:
-
 ```bash
-git clone https://github.com/seu-usuario/mvc-php-template.git
-```
-
-2. Entre no diretório do projeto:
-
-```bash
+git clone https://github.com/silvaleal/mvc-php-template.git
 cd mvc-php-template
-```
-
-3. Instale as dependências:
-
-```bash
 composer install
-```
-
-4. Configure o arquivo de ambiente:
-
-```bash
 cp .env.example .env
+php -S localhost:8000 -t public
 ```
-
-5. Configure suas variáveis de ambiente no arquivo `.env`
 
 ## 🏗️ Estrutura do Projeto
 
