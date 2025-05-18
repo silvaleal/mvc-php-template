@@ -9,7 +9,7 @@ $dotenv->safeLoad();
 
 $maintenance = $_ENV['MAINTENANCE'];
 
-if ($maintenance == '1') {
+if ($maintenance == 'true') {
     Flight::render(__DIR__.'/views/components/maintenance/maintenance.php');
     die;
 }

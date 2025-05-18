@@ -1,1 +1,3 @@
-<h2>eee</h2>
+<?php $this->layout('components/layouts/app-layout')?>
+<?php $this->insert('components/navbar')?>
+<p>Home</p>
