@@ -1,1 +1,5 @@
-<h2>Estamos em manutenção ;(</h2>
+<?php $this->layout('components/layouts/app-layout')?>
+
+<div>
+    <p>Estamos em manutenção</p>
+</div>
