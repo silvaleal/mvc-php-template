@@ -9,8 +9,3 @@ $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->safeLoad();
 
 $maintenance = $_ENV['MAINTENANCE'];
-
-if ($maintenance == 'true') {
-    Helpers::view('components/maintenance/maintenance');
-    die;
-}
