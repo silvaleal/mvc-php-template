@@ -7,7 +7,12 @@
         },
         "files": [
             "app/Controllers/PagesController.php",
-            "app/Core/helpers.php"
+            "app/Controllers/Authenticate/UserRegister.php",
+            "app/Models/Users.php",
+            "app/Helpers/auth.php",
+            "app/Helpers/validate.php",
+            "app/Helpers/view.php",
+            "database/database.php"
         ]
     },
     "authors": [
@@ -19,6 +24,10 @@
     "require": {
         "flightphp/core": "^3.15",
         "vlucas/phpdotenv": "^5.6",
-        "league/plates": "^3.6"
+        "league/plates": "^3.6",
+        "php-di/php-di": "^7.0"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^7.3"
     }
 }

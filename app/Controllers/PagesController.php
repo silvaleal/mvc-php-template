@@ -2,10 +2,13 @@
 
 namespace App\Controllers;
 
-use App\Core\Helpers;
+use App\Helpers\View;
+use App\Models\Users;
 
 class PagesController {
+
     public function home() {
-        Helpers::view('home');
+
+        View::page('home');
     }
 }
