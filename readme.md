@@ -9,6 +9,7 @@ Um template MVC (Model-View-Controller) simples e eficiente para projetos PHP.
 - MySQL/MariaDB
 
 ## 🚀 Instalação
+
 ```bash
 git clone https://github.com/silvaleal/mvc-php-template.git
 cd mvc-php-template
@@ -34,14 +35,6 @@ mvc-php-template/
 - PHP
 - Composer
 - PSR-4
-
-## 📝 Características
-
-- Arquitetura MVC
-- Sistema de Rotas
-- Autoload PSR-4
-- Configuração Flexível
-- Estrutura Organizada
 
 ## ✒️ Autor
 
