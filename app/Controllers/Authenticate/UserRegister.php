@@ -2,15 +2,13 @@
 
 namespace App\Controllers\Authenticate;
 
+use App\Helpers\Auth;
 use App\Helpers\Validate;
 use App\Helpers\View;
 use App\Models\Users;
+use Flight;
 
 class UserRegister {
-
-    public $email;
-    public $name;
-    public $password;
     public Users $usersModel;
 
     public $rules = [
@@ -29,6 +27,22 @@ class UserRegister {
     }
 
     public function action() {
-        Validate::action($_POST, $this->rules);
+        $validate = Validate::action($_POST, $this->rules);
+        
+        if($this->usersModel->checkField('email', $validate['email'])) {
+            Flight::redirect('/register');
+            return;
+        };
+        
+        if($this->usersModel->checkField('name', $validate['name'])) {
+            Flight::redirect('/register');
+            return;
+        };
+
+        $this->usersModel->insert($validate['name'],$validate['email'],$validate['password']);
+        $user = $this->usersModel->login($validate['email'], $validate['password']);
+
+        Auth::set($user);
+        Flight::redirect('/profile');
     }
 }

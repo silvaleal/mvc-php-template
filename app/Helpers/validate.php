@@ -9,7 +9,7 @@ class Validate {
         foreach ($rules as $key => $value) {
             switch ($value) {
                 case 'string':
-                    $result['key'] = strip_tags($fields[$key]);
+                    $result[$key] = strip_tags($fields[$key]);
                     break;
                 
                 default:

@@ -8,6 +8,8 @@
         "files": [
             "app/Controllers/PagesController.php",
             "app/Controllers/Authenticate/UserRegister.php",
+            "app/Controllers/Authenticate/UserLogin.php",
+            "app/Middlewares/hasAuthenticate.php",
             "app/Models/Users.php",
             "app/Helpers/auth.php",
             "app/Helpers/validate.php",

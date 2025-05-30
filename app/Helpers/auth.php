@@ -7,7 +7,12 @@ class Auth {
         if (isset($_SESSION['auth'])) return true;
     }
 
-    public function set() {
-        $_SESSION['auth'] = true;
+    public static function set(array $user) {
+        $_SESSION['auth'] = $user;
+        session_write_close();
+    }
+
+    public static function logout(){
+        unset($_SESSION['auth']);
     }
 }
