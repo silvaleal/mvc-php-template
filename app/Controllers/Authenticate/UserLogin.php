@@ -12,7 +12,7 @@ class UserLogin {
     public Users $usersModel;
 
     public $rules = [
-        'email'=>'string',
+        'email'=>'email',
         'password'=>'string'
     ];  
 

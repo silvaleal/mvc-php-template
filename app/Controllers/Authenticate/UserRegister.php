@@ -12,7 +12,7 @@ class UserRegister {
     public Users $usersModel;
 
     public $rules = [
-        'email'=>'string',
+        'email'=>'email',
         'name'=>'string',
         'password'=>'string',
         'password_confirm'=>'string',

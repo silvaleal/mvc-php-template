@@ -9,7 +9,19 @@ class Validate {
         foreach ($rules as $key => $value) {
             switch ($value) {
                 case 'string':
-                    $result[$key] = strip_tags($fields[$key]);
+                    $result[$key] = filter_var($key, FILTER_SANITIZE_STRING);
+                    break;
+
+                case 'email':
+                    $result[$key] = filter_var($key, FILTER_SANITIZE_EMAIL);
+                    break;
+                    
+                case 'float':
+                    $result[$key] = filter_var($key, FILTER_SANITIZE_NUMBER_FLOAT);
+                    break;
+                    
+                case 'int':
+                    $result[$key] = filter_var($key, FILTER_SANITIZE_NUMBER_INT);
                     break;
                 
                 default:
