@@ -39,6 +39,11 @@ class UserRegister {
             return;
         };
 
+        if ($validate['password'] != $validate['password_confirm']){
+            Flight::redirect('/register');
+            return;
+        }
+
         $this->usersModel->insert($validate['name'],$validate['email'],$validate['password']);
         $user = $this->usersModel->login($validate['email'], $validate['password']);
 
