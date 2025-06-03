@@ -10,4 +10,5 @@ if ($maintenance == 'true') {
     die;
 }
 
+session_start();
 Flight::start();

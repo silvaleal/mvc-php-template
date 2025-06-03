@@ -9,16 +9,11 @@ use App\Models\Users;
 use Flight;
 
 class UserLogin {
-    public Users $usersModel;
 
     public $rules = [
         'email'=>'email',
         'password'=>'string'
     ];  
-
-    public function __construct(Users $usersModel) {
-        $this->usersModel = $usersModel;
-    }
 
     public function page() {
         View::page('login');
@@ -27,13 +22,15 @@ class UserLogin {
     public function action() {
         $validate = Validate::action($_POST, $this->rules);
         
-        $user = $this->usersModel->login($validate['email'], $validate['password']);
-
-        if(!$user) {
+        $user = Users::where("email", $validate)->get();
+        
+        if($user->isEmpty() || !password_verify($validate["password"], $user[0]->password)) {
+            $_SESSION["error"] = "Nenhuma conta foi encontrada com esta credencial";
             Flight::redirect("/login");
+            return;
         }
-        Auth::set([]);
 
+        Auth::set([]);
         Flight::redirect("/profile");
     }
 }

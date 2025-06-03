@@ -9,7 +9,6 @@ use App\Models\Users;
 use Flight;
 
 class UserRegister {
-    public Users $usersModel;
 
     public $rules = [
         'email'=>'email',
@@ -18,10 +17,6 @@ class UserRegister {
         'password_confirm'=>'string',
     ];  
 
-    public function __construct(Users $usersModel) {
-        $this->usersModel = $usersModel;
-    }
-
     public function page() {
         View::page('register');
     }
@@ -29,25 +24,28 @@ class UserRegister {
     public function action() {
         $validate = Validate::action($_POST, $this->rules);
         
-        if($this->usersModel->checkField('email', $validate['email'])) {
+        if (Users::where('email', $validate['email'])->exists()) {
             Flight::redirect('/register');
+            $_SESSION["error"] = "Email não disponivel";
             return;
-        };
+        }
         
-        if($this->usersModel->checkField('name', $validate['name'])) {
+        if (Users::where('name', $validate['name'])->exists()) {
             Flight::redirect('/register');
-            return;
-        };
-
-        if ($validate['password'] != $validate['password_confirm']){
-            Flight::redirect('/register');
+            $_SESSION["error"] = "Nome não disponivel";
             return;
         }
 
-        $this->usersModel->insert($validate['name'],$validate['email'],$validate['password']);
-        $user = $this->usersModel->login($validate['email'], $validate['password']);
+        if ($validate['password'] != $validate['password_confirm']){
+            Flight::redirect('/register');
+            $_SESSION["error"] = "Senhas diferentes";
+            return;
+        }
+        
+        $validate["password"] = password_hash($validate["password"], PASSWORD_DEFAULT);
+        $user = Users::create($validate);
 
-        Auth::set($user);
+        Auth::set((array) $user);
         Flight::redirect('/profile');
     }
 }
