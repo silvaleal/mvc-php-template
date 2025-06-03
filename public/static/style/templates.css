@@ -1,0 +1,29 @@
+.alert {
+    background: rgba(255, 0, 0, 0.318);
+    border-radius: 0.5em;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.9px);
+    -webkit-backdrop-filter: blur(5.9px);
+    border: 1px solid rgb(139, 0, 0, 0.578);
+    color: rgb(139, 0, 0);
+    padding: 15px 25px;
+    font-weight: bold;
+    font-size: 16px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    animation: fadeIn 0.1s ease-in-out;
+    transition: all 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

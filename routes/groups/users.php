@@ -17,4 +17,6 @@ Flight::route('GET /profile', [new PagesController(), 'home'])
 
 Flight::route('GET /logout', function () {
     Auth::logout();
+    Flight::redirect("/login");
+    return;
 })->addMiddleware([new hasAuthenticate()]);
