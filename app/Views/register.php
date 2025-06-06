@@ -1,5 +1,7 @@
 <?php $this->layout('components/layouts/app-layout') ?>
 
+<link rel="stylesheet" href="/static/style/auth.css">
+
 <main class="header">
     <div class="window">
         <form action="/register" method="POST">

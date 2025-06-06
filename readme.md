@@ -2,12 +2,6 @@
 
 Um template MVC (Model-View-Controller) simples e eficiente para projetos PHP.
 
-## 📋 Pré-requisitos
-
-- PHP 7.4 ou superior
-- Composer
-- MySQL/MariaDB
-
 ## 🚀 Instalação
 
 ```bash
@@ -24,17 +18,14 @@ php -S localhost:8000 -t public
 mvc-php-template/
 ├── app/
 │   ├── Controllers/
-│   └── Core/
+│   └── Helpers/
+│   └── Middlewares/
+│   └── Models/
+│   └── Views/
+├── database/
 ├── public/
 ├── routes/
-├── views/
 ```
-
-## 🛠️ Tecnologias Utilizadas
-
-- PHP
-- Composer
-- PSR-4
 
 ## ✒️ Autor
 
