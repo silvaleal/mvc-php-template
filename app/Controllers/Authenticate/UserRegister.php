@@ -45,7 +45,7 @@ class UserRegister {
         $validate["password"] = password_hash($validate["password"], PASSWORD_DEFAULT);
         $user = Users::create($validate);
 
-        Auth::set((array) $user);
+        Auth::set( $user->toArray());
         Flight::redirect('/profile');
     }
 }
