@@ -30,7 +30,7 @@ class UserLogin {
             return;
         }
 
-        Auth::set((array) $user);
+        Auth::set( $user->toArray());
         Flight::redirect("/profile");
     }
 }
