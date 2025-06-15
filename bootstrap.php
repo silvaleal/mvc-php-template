@@ -4,7 +4,7 @@ use Database\Database;
 use Dotenv\Dotenv;
 use Illuminate\Database\Capsule\Manager as Capsule;
 
-require __DIR__."/vendor/autoload.php";
+require __DIR__ . "/vendor/autoload.php";
 
 // 
 $dotenv = Dotenv::createImmutable(__DIR__);
@@ -23,9 +23,5 @@ $capsule->setAsGlobal();
 $capsule->bootEloquent();
 
 $database = new Database();
-$database->tables();
 
-// 
 $maintenance = $_ENV['APP_MAINTENANCE'];
-
-

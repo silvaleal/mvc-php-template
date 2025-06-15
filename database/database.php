@@ -6,7 +6,7 @@ use Database\Migrations\Users;
 
 class Database {
 
-    public function tables(){
+    public function __construct(){
         new Users();
     }
 

@@ -14,7 +14,7 @@ class Users {
             $table->string('name')->unique();
             $table->string('email')->unique();
             $table->string('password');
-            $table->timestamps();
+            $table->timestamps(); // created_at & updated_at
         });
     }
 

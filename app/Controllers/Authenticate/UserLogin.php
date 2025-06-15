@@ -29,8 +29,8 @@ class UserLogin {
             Flight::redirect("/login");
             return;
         }
-
-        Auth::set( $user->toArray());
+        
+        Auth::set( $user[0]->toArray());
         Flight::redirect("/profile");
     }
 }
