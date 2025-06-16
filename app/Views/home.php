@@ -4,6 +4,6 @@
 
 <main>
     <div class="window">
-        <h2><?= $lang["welcome"]?></h2>
+        <h2><?= $lang->welcome?></h2>
     </div>
 </main>
