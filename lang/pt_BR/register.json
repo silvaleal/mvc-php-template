@@ -1,0 +1,8 @@
+{ 
+    "title": "Registro",
+    "name": "Nome",
+    "email": "Email",
+    "password": "Senha",
+    "password_confirm": "Confirmar Senha",
+    "btn_confirm": "Confirmar"
+}

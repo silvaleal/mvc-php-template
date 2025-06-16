@@ -16,7 +16,7 @@ class UserLogin {
     ];  
 
     public function page() {
-        View::page('login');
+        View::page('login', ["teste"=>123]);
     }
 
     public function action() {

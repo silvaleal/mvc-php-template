@@ -2,11 +2,11 @@
     "name": "ytsrd/fightphp-turma",
     "autoload": {
         "psr-4": {
-            "app\\": "app/",
-            "app\\Core\\": "helpers/"
+            "app\\": "app/"
         },
         "files": [
             "app/Controllers/PagesController.php",
+            "App/Controllers/ProfileController.php",
             "app/Controllers/Authenticate/UserRegister.php",
             "app/Controllers/Authenticate/UserLogin.php",
             "database/database.php",

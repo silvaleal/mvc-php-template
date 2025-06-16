@@ -24,4 +24,6 @@ $capsule->bootEloquent();
 
 $database = new Database();
 
-$maintenance = $_ENV['APP_MAINTENANCE'];
+define("MAINTENANCE", $_ENV['APP_MAINTENANCE'] == 'true' ? true : false);
+define("USER_LANG", $_SESSION["lang"] ?? $_ENV["APP_LOCATE"]);
+define("PATH_MAIN", __DIR__);

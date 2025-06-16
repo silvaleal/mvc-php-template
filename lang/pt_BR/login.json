@@ -1,0 +1,6 @@
+{ 
+    "title": "Login",
+    "email": "Email",
+    "password": "Senha",
+    "btn_confirm": "Confirmar"
+}

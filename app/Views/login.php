@@ -5,18 +5,19 @@
 <main class="header">
     <div class="window">
         <form action="/login" method="POST">
-            <h2>Login</h2>
+            <h2><?= $lang->title ?></h2>
             <div class="window-inputs">
                 <div>
-                    <label for="">Email</label>
-                    <input type="email" name="email" id="">
+                    <label for=""><?= $lang->email ?></label>
+                    <input type="email" name="email" required>
                 </div>
                 <div>
-                    <label for="">Senha</label>
-                    <input type="password" name="password" id="">
+                    <label for=""><?= $lang->password ?></label>
+                    <input type="password" name="password" required>
                 </div>
             </div>
-            <button type="submit">Confirmar</button>
+
+            <button type="submit"><?= $lang->btn_confirm ?></button>
         </form>
     </div>
 </main>

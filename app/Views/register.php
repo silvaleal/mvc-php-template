@@ -5,26 +5,26 @@
 <main class="header">
     <div class="window">
         <form action="/register" method="POST">
-            <h2>Register</h2>
+            <h2><?= $lang->title ?></h2>
             <div>
                 <div>
-                    <label for="">Nome</label>
-                    <input type="text" name="name" id="">
+                    <label for=""><?= $lang->name ?></label>
+                    <input type="text" name="name" required size="5">
                 </div>
                 <div>
-                    <label for="">Email</label>
-                    <input type="email" name="email" id="">
+                    <label for=""><?= $lang->email ?></label>
+                    <input type="email" name="email" required>
                 </div>
                 <div>
-                    <label for="">Senha</label>
-                    <input type="password" name="password" id="">
+                    <label for=""><?= $lang->password ?></label>
+                    <input type="password" name="password" required size="5">
                 </div>
                 <div>
-                    <label for="">Repita sua senha</label>
-                    <input type="password" name="password_confirm" id="">
+                    <label for=""><?= $lang->password_confirm ?></label>
+                    <input type="password" name="password_confirm" required size="5">
                 </div>
             </div>
-            <button type="submit">Confirmar</button>
+            <button type="submit"><?= $lang->btn_confirm ?></button>
         </form>
     </div>
 </main>
