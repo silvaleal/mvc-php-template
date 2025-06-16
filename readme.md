@@ -1,6 +1,12 @@
 # MVC PHP Template
 
-Um template MVC (Model-View-Controller) simples e eficiente para projetos PHP.
+Um template MVC (Model-View-Controller) simples e prático, perfeito para desenvolvedores iniciantes e experientes que buscam uma estrutura eficiente para projetos PHP, utilizando CSS e JavaScript puro.
+
+## 📋 Requisitos
+
+* PHP 8
+* Composer
+* MySQL
 
 ## 🚀 Instalação
 
@@ -23,7 +29,9 @@ mvc-php-template/
 │   └── Models/
 │   └── Views/
 ├── database/
+│   └── migrations/
 ├── public/
+│   └── static/
 ├── routes/
 ```
 
