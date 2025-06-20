@@ -6,17 +6,15 @@ use App\Models\Users;
 
 class Auth {
     public static function check() {
-        return isset($_SESSION['auth']);
+        if (!isset($_SESSION['auth']) || !Users::find($_SESSION['auth']["id"])) return false;
+
+        return true;
     }
     public static function get() {
-        $session = $_SESSION['auth'];
-        $infos = Users::where("id", $session["id"])->first();
-
-        if (!$infos) { // Caso o user esteja conectado em um usuario deletado, ele vai desconectar.
-            self::logout();
-        }
-
-        return $infos ?? null;
+        // Para ser possível atualizar diretamente do banco de dados.
+        $infos = Users::find($_SESSION['auth']["id"])->first();
+        
+        if ($infos) return $infos;
     }
 
     public static function set(array $user) {
