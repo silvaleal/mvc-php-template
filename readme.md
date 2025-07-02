@@ -18,23 +18,6 @@ cp .env.example .env
 php -S localhost:8000 -t public
 ```
 
-## 🏗️ Estrutura do Projeto
-
-```
-mvc-php-template/
-├── app/
-│   ├── Controllers/
-│   └── Helpers/
-│   └── Middlewares/
-│   └── Models/
-│   └── Views/
-├── database/
-│   └── migrations/
-├── public/
-│   └── static/
-├── routes/
-```
-
 ## ✒️ Autor
 
 * **silvaleal** - *Desenvolvimento* - [silvaleal](https://github.com/silvaleal)
