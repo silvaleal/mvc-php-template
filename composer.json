@@ -1,23 +1,12 @@
 {
-    "name": "ytsrd/fightphp-turma",
+    "name": "ytsrd/mvc-php-template",
     "autoload": {
         "psr-4": {
-            "app\\": "app/"
+            "App\\": "app/",
+            "Database\\": "database/"
         },
         "files": [
-            "app/Controllers/PagesController.php",
-            "App/Controllers/ProfileController.php",
-            "app/Controllers/Authenticate/UserRegister.php",
-            "app/Controllers/Authenticate/UserLogin.php",
-            "database/database.php",
-            "database/migrations/users.php",
-            "app/Middlewares/hasAuthenticate.php",
-            "app/Middlewares/hasGuest.php",
-            "app/Models/Users.php",
-            "app/Helpers/auth.php",
-            "app/Helpers/flash.php",
-            "app/Helpers/validate.php",
-            "app/Helpers/view.php"
+            "app/Helpers/flash.php"
         ]
     },
     "authors": [

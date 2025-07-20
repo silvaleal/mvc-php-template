@@ -1,5 +1,7 @@
 <?php 
 
+namespace App\Middlewares;
+
 use App\Helpers\Auth;
 
 class hasAuthenticate {

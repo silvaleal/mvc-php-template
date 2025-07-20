@@ -5,7 +5,7 @@ namespace App\Middlewares;
 use App\Helpers\Auth;
 use Flight;
 
-class HasGuest {
+class hasGuest {
     public function before($params) {
         if (Auth::check()) {
             Flight::redirect('/profile');
