@@ -12,7 +12,7 @@ class Auth {
     }
     public static function get() {
         // Para ser possível atualizar diretamente do banco de dados.
-        $infos = Users::find($_SESSION['auth']["id"])->first();
+        $infos = Users::find($_SESSION['auth']["id"]);
         
         if ($infos) return $infos;
     }
